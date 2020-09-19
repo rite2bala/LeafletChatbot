@@ -8,7 +8,7 @@ import Typography from "@material-ui/core/Typography";
 
 const styles = (theme) => ({
   root: {
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(20),
     marginBottom: theme.spacing(4)
   },
   images: {
@@ -90,85 +90,85 @@ function ProductCategories(props) {
   const images = [
     {
       url:
-        "https://cdn.pixabay.com/photo/2016/01/19/15/05/doctor-1149149_1280.jpg",
-      title: "HCP",
-      width: "33.33%",
-      href: "/hcp"
+        "https://cdn.pixabay.com/photo/2015/11/12/13/08/heart-care-1040229_1280.png",
+      title: "Entresto 100mg (Sacubitril/Valsartan)",
+      width: "50%",
+      href: "/Entresto"
     },
     {
       url:
         "https://cdn.pixabay.com/photo/2017/10/04/09/56/laboratory-2815641_1280.jpg",
-      title: "CSC and Site",
-      width: "33.33%",
-      href: "/site"
-    },
-    {
-      url:
-        "https://cdn.pixabay.com/photo/2015/05/10/21/28/accounting-761599_1280.jpg",
-      title: "Payer",
-      width: "33.34%",
-      href: "/payer"
-    },
-    {
-      url:
-        "https://cdn.pixabay.com/photo/2019/06/22/19/58/cookie-jar-4292358_1280.jpg",
-      title: "Cryoport",
-      width: "33.34%",
-      href: "/cryoport"
-    },
-    {
-      url:
-        "https://cdn.pixabay.com/photo/2020/02/16/19/08/transport-4854538_1280.jpg",
-      title: "World Courier",
-      width: "33.33%",
-      href: "/worldcourier"
-    },
-    {
-      url:
-        "https://cdn.pixabay.com/photo/2019/01/12/19/38/audit-3929140_1280.jpg",
-      title: "Auditor",
-      width: "33.33%",
-      href: "/auditor"
+      title: "Clozaril 100mg (Clozapine)",
+      width: "50%",
+      href: "/Clozaril"
     }
   ];
 
   return (
-    <Container className={classes.root} component="section" maxWidth="lg">
-      <Typography variant="h4" marked="center" align="center" component="h2">
-        Kymriah Central Login Portal
-      </Typography>
-      <div className={classes.images}>
-        {images.map((image) => (
-          <ButtonBase
-            key={image.title}
-            className={classes.imageWrapper}
-            style={{
-              width: image.width
-            }}
-            href={image.href}
-          >
-            <div
-              className={classes.imageSrc}
+    <div>
+      <video
+        autoPlay
+        loop
+        style={{
+          position: "absolute",
+          width: "100%",
+          left: "0%",
+          height: "100%",
+          top: "0%",
+          objectFit: "cover",
+          transform: "translate (-50%,-50%)",
+          zIndex: "-1"
+        }}
+      >
+        <source
+          src="https://static.videezy.com/system/resources/previews/000/018/961/original/blue.mp4"
+          // src="https://assets.mixkit.co/videos/preview/mixkit-street-with-people-walking-at-dusk-3428-large.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <Container className={classes.root} component="section" maxWidth="lg">
+        <Typography
+          color="secondary"
+          variant="h4"
+          marked="center"
+          align="center"
+          component="h2"
+        >
+          Product Information Portal
+        </Typography>
+        <div className={classes.images}>
+          {images.map((image) => (
+            <ButtonBase
+              key={image.title}
+              className={classes.imageWrapper}
               style={{
-                backgroundImage: `url(${image.url})`
+                width: image.width
               }}
-            />
-            <div className={classes.imageBackdrop} />
-            <div className={classes.imageButton}>
-              <Typography
-                component="h3"
-                variant="h6"
-                color="inherit"
-                className={classes.imageTitle}
-              >
-                {image.title}
-                <div className={classes.imageMarked} />
-              </Typography>
-            </div>
-          </ButtonBase>
-        ))}
-      </div>
-    </Container>
+              href={image.href}
+            >
+              <div
+                className={classes.imageSrc}
+                style={{
+                  backgroundImage: `url(${image.url})`
+                }}
+              />
+              <div className={classes.imageBackdrop} />
+              <div className={classes.imageButton}>
+                <Typography
+                  component="h3"
+                  variant="h6"
+                  color="inherit"
+                  className={classes.imageTitle}
+                >
+                  {image.title}
+                  <div className={classes.imageMarked} />
+                </Typography>
+              </div>
+            </ButtonBase>
+          ))}
+        </div>
+      </Container>
+    </div>
   );
 }
 

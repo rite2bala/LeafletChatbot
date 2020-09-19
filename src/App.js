@@ -1,3 +1,21 @@
+// import React, { Component } from "react";
+// import { Switch, Route } from "react-router-dom";
+// import { Home } from "./scenes/homescreen/home";
+// // import Test from '../src/temp/temp'
+// class App extends Component {
+//   render() {
+//     return (
+//       <Switch>
+//         <Route exact path="/" component={Home} />
+//         <Route exact path="/Clozaril" component={Home} />
+//         <Route exact path="/Entresto" component={Home} />
+//       </Switch>
+//     );
+//   }
+// }
+
+// export default App;
+
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
